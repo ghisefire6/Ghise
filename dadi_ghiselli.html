@@ -1,0 +1,42 @@
+<html>
+  <body>
+	 <script>
+        do{
+            var a=undefined;
+            var p_G1=0;
+            var p_G2=0;
+            var tiro=0
+            do{
+                if (a!=undefined){
+                    var a = prompt("Grande👍 hai sbagliato l'unica cosa che potevi sbagliare.     Inserisci un numero di tiri valido: ");
+                }
+                var a = prompt("Inserisci il numero di tiri: ");
+            }while(a<0)
+
+            for (var i=1; i<=a; i++){
+                alert(i+"^ Tiro per Giocatore 1")
+                tiro=Math.floor((Math.random() * 6)+1)
+                alert("Giocatore 1 ha fatto "+tiro)
+                p_G1+=tiro
+                alert(i+"^ Tiro per Giocatore 2")
+                tiro=Math.floor((Math.random() * 6)+1)
+                alert("Giocatore 2 ha fatto "+tiro)
+                p_G2+=tiro
+            }
+            
+            if (p_G1>p_G2){
+                alert("Giocatore 1 ha vinto con "+p_G1+" punti , congratulazioni🥇!");
+                alert("Congratulazioni anche al Giocatore 2 che è riuscito a perdere nonostante abbia fatto "+p_G2+" punti 🥈!")
+            }
+            else if(p_G1<p_G2){
+                alert("Giocatore 2 ha vinto con "+p_G2+" punti , congratulazioni🥇!");
+                alert("Congratulazioni anche al Giocatore 1 che è riuscito a perdere nonostante abbia fatto "+p_G1+" punti 🥈!")
+            }
+            else{
+                alert("Pareggio con "+p_G1+" punti!")
+            }
+            var Continue=confirm("Vuoi fare una nuova partita? ")
+        }while(Continue=true)
+	  </script>
+  </body>
+</html>
